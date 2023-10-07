@@ -1,0 +1,109 @@
+/* ------------Drop Down Button Style ----------*/
+.dropButton {
+    background-color:transparent;
+    color: black;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    }
+
+.dropDown {
+    position: relative;
+    display: inline-block;
+    border-radius: 12px;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    }
+
+.dropDown-items {
+    display: none;
+    position: absolute;
+    background-color:transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 12px;
+    }
+
+.dropDown-items a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 12px;
+    }
+
+.dropDown-items a:hover {
+    background-color:burlywood;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    }
+
+.dropDown .dropDown-items {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    }
+
+.dropDown:hover .dropDown-items {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    }
+
+.dropDown:hover .dropButton {
+    background-color:transparent;
+    color: grey;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    }
+
+/* ------------Fade in Style ----------*/
+.fade-in-title {
+    animation: fadeIn 10s;
+    }
+@keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
+/* ------------H1 Style ----------*/
+.center-style {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+/* ------------Grid Style ----------*/
+.gridHead { grid-area: header; }
+.gridTitle { grid-area: title; }
+.gridBody { grid-area: body; }
+.gridFooter { grid-area: footer; }
+.gridLeft { grid-area: gleft;}
+
+.gridContainer {
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'title title title'
+    'gleft body body'
+    'footer footer footer';
+}
+
+.gridContainer > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 15px 0;
+}
